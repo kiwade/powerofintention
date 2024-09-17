@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>The Framework</title>
+  <meta name="description" content="Framework" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-control" content="public" />
+  <!-- <link rel="apple-touch-icon" href="ico/apple-touch-icon.png" /> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+    rel="stylesheet"> -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Oswald:wght@500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="assets/js/svg-inject.js"></script>
+</head>
+
+<body>
+
+  <div class="section hero theme-tertiary">
+    <div class="container">
+      <h1>The Framework</h1>
+    </div>
+    <div class="parallax">
+      <img alt="hero"
+        src="https://images.unsplash.com/photo-1592330169142-b488cfd72b2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    </div>
+  </div>
+  <div class="section color-primary-dark background-white">
+    <div class="container">
+      <h1>Header 1</h1>
+      <h2>Header 2</h2>
+      <h3>Header 3</h3>
+      <h4>Header 4</h4>
+      <h5>Header 5</h5>
+      <h6>Header 6</h6>
+      <div class="callout">
+        <p>
+          To <strong>align</strong> any section or paragraph of text, just include the following class:</code>
+        </p>
+        <p class="left-align"><code>left-align</code></p>
+        <p class="center-align"><code>center-align</code></p>
+        <p class="right-align"><code>right-align</code></p>
+      </div>
+      <h2>Tiles + Cards</h2>
+      <div class="callout">
+        <p>
+          To use <strong>Tiles and Cards</strong> you'll need to adjust the class based on how many you want to
+          display.
+          Currently, it accepts <strong>1-4 tiles</strong>. To update this, just alter the parent element that contains
+          the Cards to have the class: <code>tiles count-3</code>
+        </p>
+      </div>
+      <div class="tiles count-3">
+        <div class="card card-primary">
+          <div class="media">
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1601412436009-d964bd02edbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80">
+          </div>
+          <div class="content">
+            <h6>Card Primary</h6>
+            <p>Fusce et ante quam. Maecenas suscipit, arcu vel fringilla vehicula, urna eros consequat tortor.</p>
+          </div>
+        </div>
+        <div class="card card-secondary">
+          <div class="media">
+            <img alt="svg" src="assets/media/svg/unity.svg" onload="SVGInject(this)">
+          </div>
+          <div class="content">
+            <h6>Card Secondary</h6>
+            <p>Fusce et ante quam. Maecenas suscipit.</p>
+          </div>
+        </div>
+        <div class="card card-tertiary">
+          <div class="media">
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1601412436009-d964bd02edbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80">
+          </div>
+          <div class="content">
+            <h6>Card Tertiary</h6>
+            <p>Fusce et ante quam. Maecenas suscipit, arcu vel fringilla vehicula, urna eros consequat tortor.</p>
+          </div>
+        </div>
+      </div>
+      <div class="callout">
+        <p>
+          You can also add the class <code>transparent</code> to any card to force the background to adhere to the
+          section color.
+        </p>
+      </div>
+      <div class="tiles count-1">
+        <div class="card card-primary transparent">
+          <div class="media">
+            <img alt="svg" src="assets/media/svg/unity.svg" onload="SVGInject(this)">
+          </div>
+          <div class="content">
+            <h6>Card Primary Transparent</h6>
+            <p>Fusce et ante quam. Maecenas suscipit, arcu vel fringilla vehicula, urna eros consequat tortor.</p>
+          </div>
+        </div>
+      </div>
+      <div class="callout">
+        <p>
+          You can also add the class <code>card-horizontal</code> to force a card set to a horizontal view.
+        </p>
+      </div>
+      <div class="tiles count-2">
+        <div class="card card-horizontal card-primary">
+          <div class="media">
+            <img alt="image"
+              src="https://images.unsplash.com/photo-1601412436009-d964bd02edbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=150&h=150&q=80">
+          </div>
+          <div class="content">
+            <h6>Card Primary</h6>
+            <p>Fusce et ante quam. Maecenas suscipit.</p>
+          </div>
+        </div>
+        <div class="card card-horizontal card-secondary">
+          <div class="media">
+            <img alt="svg" src="assets/media/svg/unity.svg" onload="SVGInject(this)">
+          </div>
+          <div class="content">
+            <h6>Card Secondary</h6>
+            <p>Fusce et ante quam. Maecenas suscipit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <h2>Collapse</h2>
+      <div class="callout">
+        <p>
+          I primarily need these for the Navigation Menu and Footer, but they may be useful for the general site.
+        </p>
+      </div>
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header" role="button">
+            <span>Links</span>
+            <img alt="svg" src="assets/media/svg/plus.svg" onload="SVGInject(this)">
+          </div>
+          <div class="collapsible-body">
+            <a href="javascript:">Link A</a>
+            <a href="javascript:">Link B</a>
+            <a href="javascript:">Link C</a>
+            <a href="javascript:">Link D</a>
+            <a href="javascript:">Link E</a>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <span>Paragraph</span>
+            <img alt="svg" src="assets/media/svg/plus.svg" onload="SVGInject(this)">
+          </div>
+          <div class="collapsible-body">
+            <p>Nam bibendum nibh congue nunc tempus, vel pulvinar magna mattis. Nunc congue augue erat, non rhoncus nisl
+              viverra ac. Nam semper quis augue non aliquam. Praesent aliquam augue dictum, lobortis nisi a, interdum
+              eros. Vestibulum convallis velit dolor, id rhoncus quam faucibus et. Suspendisse potenti. Duis felis eros,
+              dapibus fermentum pellentesque at, porttitor a lectus.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="divider"></div>
+      <h2>Media : Collage</h2>
+      <div class="callout">
+        <p>
+          Images have multiple settings. Lets start with <strong>Text</strong>, you can add a <strong>Title</strong>
+          and/or a <strong>Description</strong>. You can also add the class <code>fade-in-title</code> to the
+          <code>anchor</code> tag if you want to show the image by default and fade both the <strong>Title</strong> and
+          <strong>Description</strong> in.
+        </p>
+        <p>
+          Lastly, there are additional settings to control aspect ratio but this was
+          set up in case we ever need a Gallery of some type.
+        </p>
+      </div>
+      <div class="tiles count-4">
+        <a href="javascript:">
+          <figure class="aspect-1x1">
+            <img
+              src="https://images.unsplash.com/photo-1549916978-e3954eda7be0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80">
+            <figcaption>
+              <h6>Title Goes Here</h6>
+              <p>Click Here</p>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="javascript:" class="fade-in-title">
+          <figure class="aspect-1x1">
+            <img
+              src="https://images.unsplash.com/photo-1499117901949-e34ef1b2444a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500&q=80">
+            <figcaption>
+              <h6>An Article Title</h6>
+              <p>Read More</p>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="javascript:" class="fade-in-title">
+          <figure class="aspect-1x1">
+            <img
+              src="https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80">
+            <figcaption>
+              <h6>Just A Title</h6>
+              <p>Read More</p>
+            </figcaption>
+          </figure>
+        </a>
+        <figure class="aspect-1x1">
+          <img
+            src="https://images.unsplash.com/photo-1602459831426-7f1bd5b4339a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80">
+        </figure>
+      </div>
+      <div class="divider"></div>
+      <h2>Video or Articles</h2>
+      <div class="tiles count-3">
+        <a href="javascript:">
+          <article class="video-link">
+            <div class="media">
+              <img alt="svg" src="assets/media/svg/play.svg" onload="SVGInject(this)">
+
+              <img
+                src="https://images.unsplash.com/photo-1630986954063-01a39c755b5c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&w=1080&q=80">
+            </div>
+            <div class="content">
+              <h6>Title for a YouTube Video Link</h6>
+              <p>Nunc congue augue erat, non rhoncus nisl viverra phalat ac.</p>
+            </div>
+          </article>
+        </a>
+        <a href="javascript:">
+          <article>
+            <div class="media">
+              <img
+                src="https://images.unsplash.com/photo-1511314797109-6ba9c4854fd0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=80">
+            </div>
+            <div class="content">
+              <h6>Title for a Post Link</h6>
+              <p>Praesent aliquam augue dictum, lobortis nisi a, interdum eros.</p>
+            </div>
+          </article>
+        </a>
+        <a href="javascript:">
+          <article>
+            <div class="media">
+              <img
+                src="https://images.unsplash.com/photo-1627259579072-3825b28a5df0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=80">
+            </div>
+            <div class="content">
+              <h6>Overflow Test</h6>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.</p>
+            </div>
+          </article>
+        </a>
+      </div>
+      <div class="divider"></div>
+      <h2>Themes : Preset</h2>
+    </div>
+  </div>
+  <div class="section theme-primary-light">
+    <div class="container">
+      <h4>Primary Light</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section theme-primary">
+    <div class="container">
+      <h4>Primary</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section theme-primary">
+    <div class="container">
+      <h4>Primary</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+    <div class="parallax opacity-02">
+      <img alt="temp"
+        src="https://images.unsplash.com/photo-1508791573065-57c595096106?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    </div>
+  </div>
+  <div class="section theme-primary-dark">
+    <div class="container">
+      <h4>Primary Dark</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section theme-secondary-light">
+    <div class="container">
+      <h4>Secondary Light</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section theme-secondary">
+    <div class="container">
+      <h4>Secondary</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section theme-secondary">
+    <div class="container">
+      <h4>Secondary</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+    <div class="parallax opacity-02">
+      <img alt="temp"
+        src="https://images.unsplash.com/photo-1508791573065-57c595096106?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    </div>
+  </div>
+  <div class="section theme-secondary-dark">
+    <div class="container">
+      <h4>Secondary Dark</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section theme-tertiary-light">
+    <div class="container">
+      <h4>Tertiary Light</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section theme-tertiary">
+    <div class="container">
+      <h4>Tertiary</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section theme-tertiary">
+    <div class="container">
+      <h4>Tertiary</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+    <div class="parallax opacity-02">
+      <img alt="temp"
+        src="https://images.unsplash.com/photo-1508791573065-57c595096106?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    </div>
+  </div>
+  <div class="section theme-tertiary-dark">
+    <div class="container">
+      <h4>Tertiary Dark</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section color-primary-dark background-white">
+    <div class="container">
+      <h2>Themes : Custom</h2>
+    </div>
+  </div>
+  <div class="section color-secondary background-off-white">
+    <div class="container">
+      <h4>Secondary / Off-White</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section color-tertiary background-off-white">
+    <div class="container">
+      <h4>Tertiary / Off-White</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+    <div class="parallax opacity-04">
+      <img alt="temp"
+        src="https://images.unsplash.com/photo-1592330169142-b488cfd72b2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    </div>
+  </div>
+  <div class="section color-primary-light background-off-black">
+    <div class="container">
+      <h4>Primary / Off-Black</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+  </div>
+  <div class="section color-secondary background-off-black">
+    <div class="container">
+      <h4>Secondary / Off-Black</h4>
+      <p>Donec ornare dignissim elit, ac iaculis nisi varius eget. Sed a fringilla tellus, ornare efficitur ex.</p>
+    </div>
+    <div class="parallax opacity-04">
+      <img alt="temp"
+        src="https://images.unsplash.com/photo-1508791573065-57c595096106?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+    </div>
+  </div>
+
+  <div class="section color-primary-dark background-white">
+    <div class="container">
+      <h2>Blockquote</h2>
+      <div class="callout">
+        <p>
+          Wrapping anything in <code>blockquote</code> will generate a quote. This adheres to all themes listed below so
+          if it's added inside of any of those, it will inherit the correct color palette.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section theme-primary">
+    <div class="container">
+      <blockquote>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
+        Sed a fringilla tellus, ornare efficitur ex.
+      </blockquote>
+    </div>
+  </div>
+  <div class="section color-secondary background-off-black">
+    <div class="container">
+      <blockquote>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.
+        Sed a fringilla tellus, ornare efficitur ex.
+      </blockquote>
+      <div class="parallax opacity-04">
+        <img alt="temp"
+          src="https://images.unsplash.com/photo-1508791573065-57c595096106?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/bundle.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+
+</html>
