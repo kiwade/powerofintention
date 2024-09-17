@@ -1,0 +1,31 @@
+blockquote {
+  font-size: $font-size-lg;
+  font-style: italic;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+
+  // Questioning Myself
+  // May not use this, still not sure i like it
+  //
+  // quotes: "\201C""\201D""\2018""\2019";
+
+  // &:before,
+  // &:after {
+  //   display: inline;
+  //   font-size: 2.5rem;
+  //   height: 0;
+  //   line-height: 0;
+  //   position: relative;
+  //   top: 5px;
+  // }
+
+  // &:before {
+  //   content: open-quote;
+  //   padding-right: 0.5rem;
+  // }
+
+  // &:after {
+  //   content: close-quote;
+  // }
+}

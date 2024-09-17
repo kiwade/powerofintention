@@ -1,0 +1,141 @@
+//Default styles
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  // display: flex;
+  // min-height: 100vh;
+  // flex-direction: column;
+  &.mobile-menu-open {
+    overflow: hidden;
+  }
+}
+
+main {
+  // flex: 1 0 auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-stack;
+}
+
+ul {
+  &:not(.browser-default) {
+    padding-left: 0;
+    list-style-type: none;
+
+    & > li {
+      list-style-type: none;
+    }
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.valign-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.hoverable {
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+// Transitions
+ul.staggered-list li {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 0;
+  transform-origin: 0 50%;
+}
+
+// Utilities
+.hide {
+  display: none !important;
+}
+
+// Text Align
+.left-align {
+  text-align: left;
+}
+.right-align {
+  text-align: right;
+}
+.center,
+.center-align {
+  text-align: center;
+}
+
+// Floats
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+
+// No Text Select
+.no-select {
+  user-select: none;
+}
+
+// Circle
+.circle {
+  border-radius: 50%;
+}
+
+// Center
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Truncate
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// No Padding
+.no-padding {
+  padding: 0 !important;
+}
+
+// No Margin
+.no-margin {
+  margin: 0 !important;
+}
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}

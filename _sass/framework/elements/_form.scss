@@ -1,0 +1,46 @@
+// Remove Focus Boxes
+select:focus {
+  outline: $select-focus;
+}
+
+button:focus {
+  outline: none;
+  background-color: $button-background-focus;
+}
+
+/* Style Placeholders */
+
+::placeholder {
+  color: $placeholder-text-color;
+}
+
+/* Text inputs */
+
+input:not([type]),
+input[type="text"]:not(.browser-default),
+input[type="password"]:not(.browser-default),
+input[type="email"]:not(.browser-default),
+input[type="url"]:not(.browser-default),
+input[type="tel"]:not(.browser-default),
+input[type="number"]:not(.browser-default),
+input[type="search"]:not(.browser-default),
+textarea.materialize-textarea {
+  // General Styles
+  background-color: rgba($input-focus-color, 0.1);
+  border: 1px solid rgba($input-focus-color, 0.5);
+  border-radius: $border-raduis-base;
+  outline: none;
+  color: $input-focus-color;
+  height: $input-height;
+  width: 100%;
+  font-size: $input-font-size;
+  padding: $input-padding;
+  box-sizing: content-box;
+  transition: all 500ms ease-in-out;
+
+  // Focused input style
+  &:focus:not([readonly]) {
+    border-color: $input-focus-color;
+    background: rgba($input-focus-color, 0.25);
+  }
+}

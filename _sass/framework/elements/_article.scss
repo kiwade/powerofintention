@@ -1,0 +1,122 @@
+article {
+  border-top-left-radius: $border-raduis-base;
+  border-top-right-radius: $border-raduis-base;
+  color: color("shades", "black");
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+
+  &.video-link {
+    .play {
+      cursor: pointer;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: 60px;
+      z-index: 1;
+      height: 60px;
+
+      .stroke-solid {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 0;
+        stroke-width: 4px;
+        transition: stroke-dashoffset 1s ease, opacity 1s ease;
+      }
+
+      .icon {
+        transform-origin: 50% 50%;
+        transition: transform 500ms ease-out;
+      }
+    }
+  }
+
+  > .media {
+    height: 0;
+    margin: 0;
+    opacity: 1;
+    overflow: hidden;
+    padding-bottom: (9 / 16) * 100%;
+    position: relative;
+
+    > img {
+      filter: blur(0);
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      transform: scale(1);
+      transition: all 500ms ease-in-out;
+      width: 100%;
+    }
+  }
+
+  > .content {
+    background-color: color("shades", "white");
+    border-bottom-left-radius: $border-raduis-base;
+    border-bottom-right-radius: $border-raduis-base;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.5rem;
+
+    &.has-action-button {
+      p {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    h6 {
+      width: 100%;
+      display: flex;
+      text-transform: uppercase;
+
+      span {
+        margin-left: auto;
+      }
+    }
+
+    p {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      overflow: hidden;
+    }
+
+    a {
+      margin-top: auto;
+    }
+  }
+}
+
+a > article {
+  // Hover
+  &:hover {
+    &.video-link {
+      .play {
+        .stroke-solid {
+          opacity: 0;
+          stroke-dashoffset: 300;
+        }
+        .icon {
+          transform: scale(1.25);
+        }
+      }
+    }
+
+    > .media {
+      img {
+        filter: blur(2px);
+        opacity: 0.4;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

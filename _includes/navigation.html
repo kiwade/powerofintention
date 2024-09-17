@@ -1,0 +1,59 @@
+<nav>
+  <a href="." class="brand">
+    <img src="assets/images/ReubenReamsLogofavicon.png" height="40px">
+  </a>
+  <ul class="links">
+    <li class="trigger-mobile-nav">
+      <a href="javascript:">
+        <img alt="menu" src="assets/media/svg/close.svg" onload="SVGInject(this)">
+      </a>
+    </li>
+    {% assign links = site.data.navigation %}
+    {% for link in links %}
+    {% assign class = nil %}
+    {% if page.url contains link.url %}
+    {% assign class = 'active' %}
+    {% endif %}
+    {% if link.sublinks %}
+    <li class="dropdown {{ class }}">
+      <a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}" class="dropdown-toggle" data-toggle="dropdown"
+        role="button" aria-haspopup="true" aria-expanded="false">
+        <span data-hover="{{ link.title }}">{{ link.title }}</span>
+        <img alt="dropdown" src="assets/media/svg/caret-down.svg" onload="SVGInject(this)">
+      </a>
+      <ul class="dropdown-menu">
+        {% for sublink in link.sublinks %}
+        {% assign class = nil %}
+        {% if page.url contains sublink.url %}
+        {% assign class = 'active' %}
+        {% endif %}
+        <li class="{{ class }}">
+          <a href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}">
+            <span data-hover="{{ sublink.title }}">{{ sublink.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% else %}
+    <li class="{{ class }}">
+      <a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">
+        <span data-hover="{{ link.title }}">{{ link.title }}</span>
+      </a>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+
+<div class="mobile-mask trigger-mobile-nav"></div>
+
+<script>
+  let menu = document.querySelectorAll(".trigger-mobile-nav");
+  menu.forEach(function (element) {
+    element.addEventListener("click", function () {
+      console.log("TEST");
+      document.body.classList.toggle("mobile-menu-open");
+    });
+  });
+</script>

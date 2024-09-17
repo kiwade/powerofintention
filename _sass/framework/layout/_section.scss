@@ -1,0 +1,220 @@
+@mixin theme-text($color) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6:not(:where(figure *)),
+  blockquote,
+  a {
+    &:not(:where(.card *)) {
+      color: $color;
+    }
+  }
+
+  .btn-outline:hover {
+    color: color("shades", "white");
+    border-color: $color;
+  }
+
+  .btn:hover,
+  a figure,
+  a article .media {
+    background: $color;
+  }
+}
+
+.section {
+  overflow: hidden;
+  padding-bottom: $section-padding;
+  padding-top: $section-padding;
+  position: relative;
+
+  // Padding
+  &.no-padding {
+    padding: 0;
+  }
+  &.no-padding-bot {
+    padding-bottom: 0;
+  }
+  &.no-padding-top {
+    padding-top: 0;
+  }
+
+  &.padding-double {
+    padding-bottom: $section-padding * 2;
+    padding-top: $section-padding * 2;
+  }
+
+  &.top-gradient {
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 35%;
+      pointer-events: none;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.05) 100%
+      );
+    }
+  }
+
+  // Theme Support
+  &.theme-primary-light {
+    background-color: color("primary", "lighten-1");
+    color: $off-black;
+    @include theme-text(color("primary", "darken-1"));
+    // color: color("shades", "white");
+    // @include theme-text(lighten(color("primary", "lighten-1"), 35%));
+  }
+
+  &.theme-primary {
+    background-color: color("primary", "base");
+    color: color("shades", "white");
+    @include theme-text(lighten(color("primary", "base"), 35%));
+  }
+
+  &.theme-primary-dark {
+    background-color: color("primary", "darken-1");
+    color: color("shades", "white");
+    @include theme-text(color("primary", "lighten-1"));
+  }
+
+  &.theme-primary-darken-2 {
+    background-color: color("primary", "darken-2");
+    color: color("shades", "white");
+    @include theme-text(color("primary", "lighten-1"));
+  }
+
+  &.theme-primary-darken-3 {
+    background-color: color("primary", "darken-3");
+    color: color("shades", "white");
+    @include theme-text(color("primary", "lighten-1"));
+  }
+
+  &.theme-secondary-light {
+    background-color: color("secondary", "lighten-1");
+    @include theme-text(color("secondary", "darken-1"));
+  }
+
+  &.theme-secondary {
+    background-color: color("secondary", "base");
+    color: color("shades", "white");
+    @include theme-text(lighten(color("secondary", "base"), 30%));
+  }
+
+  &.theme-secondary-dark {
+    background-color: color("secondary", "darken-1");
+    color: color("shades", "white");
+    @include theme-text(color("secondary", "lighten-1"));
+  }
+
+  &.theme-tertiary-light {
+    background-color: color("tertiary", "lighten-1");
+    color: $off-black;
+    @include theme-text(color("tertiary", "darken-1"));
+    // color: color("shades", "white");
+    // @include theme-text(lighten(color("tertiary", "lighten-1"), 35%));
+  }
+
+  &.theme-tertiary {
+    background-color: color("tertiary", "base");
+    color: color("shades", "white");
+    @include theme-text(lighten(color("tertiary", "base"), 35%));
+  }
+
+  &.theme-tertiary-dark {
+    background-color: color("tertiary", "darken-1");
+    color: color("shades", "white");
+    @include theme-text(color("tertiary", "lighten-1"));
+  }
+
+  // Manual Overrides
+  &.color-primary-light {
+    @include theme-text(color("primary", "lighten-1"));
+  }
+
+  &.color-primary {
+    @include theme-text(color("primary", "base"));
+  }
+
+  &.color-primary-dark {
+    @include theme-text(color("primary", "darken-1"));
+  }
+
+  &.color-secondary-light {
+    @include theme-text(color("secondary", "lighten-1"));
+  }
+
+  &.color-secondary {
+    @include theme-text(color("secondary", "base"));
+  }
+
+  &.color-secondary-dark {
+    @include theme-text(color("secondary", "darken-1"));
+  }
+
+  &.color-tertiary-light {
+    @include theme-text(color("tertiary", "lighten-1"));
+  }
+
+  &.color-tertiary {
+    @include theme-text(color("tertiary", "base"));
+  }
+
+  &.color-tertiary-dark {
+    @include theme-text(color("tertiary", "darken-1"));
+  }
+
+  &.color-white {
+    @include theme-text(color("shades", "white"));
+  }
+
+  &.color-off-black {
+    @include theme-text(color("shades", "off-black"));
+  }
+
+  &.background-lighten-1 {
+    background-color: color("grey", "lighten-1");
+    color: color("shades", "black");
+  }
+
+  &.background-lighten-2 {
+    background-color: color("grey", "lighten-2");
+    color: color("shades", "black");
+  }
+
+  &.background-lighten-3 {
+    background-color: color("grey", "lighten-3");
+    color: color("shades", "black");
+  }
+
+  &.background-lighten-4 {
+    background-color: color("grey", "lighten-4");
+    color: color("shades", "black");
+  }
+
+  &.background-lighten-5 {
+    background-color: color("grey", "lighten-5");
+    color: color("shades", "black");
+  }
+
+  &.background-white {
+    background-color: color("shades", "white");
+    color: color("shades", "black");
+  }
+
+  &.background-off-white {
+    background-color: color("shades", "off-white");
+    color: color("shades", "black");
+  }
+
+  &.background-off-black {
+    background-color: color("shades", "off-black");
+    color: color("shades", "white");
+  }
+}

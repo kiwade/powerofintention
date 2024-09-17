@@ -1,0 +1,63 @@
+.collapsible {
+  margin: 0;
+
+  li {
+    border-bottom: 1px solid #ededed;
+    display: flex;
+    flex-direction: column;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    .collapsible-header {
+      align-items: center;
+      color: $off-black;
+      display: flex;
+      padding: 1rem 0;
+      cursor: pointer;
+
+      &:focus {
+        outline: 0;
+      }
+
+      > span {
+        flex-grow: 1;
+      }
+
+      > svg {
+        height: 18px;
+        transform: rotate(0);
+        width: 18px;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    .collapsible-body {
+      display: none;
+      box-sizing: border-box;
+
+      > p,
+      > a {
+        color: #545454;
+        display: flex;
+        margin-bottom: 1rem;
+
+        &:last-of-type {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      > .spacer {
+        display: block;
+        height: 1.5rem;
+      }
+    }
+
+    &.active {
+      .collapsible-header > svg {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

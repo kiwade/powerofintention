@@ -1,0 +1,134 @@
+.card {
+  align-items: center;
+  border-radius: $border-raduis-base;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+
+  .media {
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    > img {
+      height: inherit;
+      width: inherit;
+    }
+  }
+
+  .content {
+    display: flex;
+  }
+
+  // Default Stacked Version
+  &:not(.card-horizontal) {
+    flex-direction: column;
+
+    > .media {
+      margin-bottom: 1rem;
+
+      @media only screen and (min-width: 0) {
+        height: 90px;
+        width: 90px;
+      }
+
+      @media only screen and (min-width: $medium-screen) {
+        height: 120px;
+        width: 120px;
+      }
+    }
+
+    > .content {
+      flex-direction: column;
+    }
+  }
+
+  // Optional Horizontal Version
+  &.card-horizontal {
+    flex-direction: row;
+
+    > .media {
+      height: 60px;
+      margin-bottom: 0;
+      min-height: 60px;
+      min-width: 60px;
+      width: 60px;
+    }
+
+    > .content {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-left: 1rem;
+      text-align: left;
+
+      h6 {
+        margin: 0;
+      }
+    }
+  }
+
+  // Theme Support
+  &.card-primary {
+    &:not(.transparent) {
+      background-color: lighten(color("primary", "base"), 45%);
+    }
+
+    .media {
+      background: color("primary", "darken-1");
+    }
+
+    h6 {
+      color: color("primary", "darken-1");
+    }
+
+    svg {
+      path {
+        fill: color("shades", "white");
+      }
+    }
+  }
+
+  &.card-secondary {
+    &:not(.transparent) {
+      background-color: lighten(color("secondary", "base"), 30%);
+    }
+
+    .media {
+      background: color("secondary", "darken-1");
+    }
+
+    h6 {
+      color: color("secondary", "darken-1");
+    }
+
+    svg {
+      path {
+        fill: color("shades", "white");
+      }
+    }
+  }
+
+  &.card-tertiary {
+    &:not(.transparent) {
+      background-color: lighten(color("tertiary", "base"), 55%);
+    }
+
+    .media {
+      background: color("tertiary", "darken-1");
+    }
+
+    h6 {
+      color: color("tertiary", "darken-1");
+    }
+
+    svg {
+      path {
+        fill: color("shades", "white");
+      }
+    }
+  }
+}
